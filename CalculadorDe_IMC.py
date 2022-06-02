@@ -1,5 +1,6 @@
 """
 Código que calcula o imc de uma pessoa com base nos dados perguntados
+conferindo se os dados recebidos estão no formato correto, se não, avisa
 """
 peso = input('qual o seu peso? ')
 

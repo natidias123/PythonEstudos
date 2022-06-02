@@ -2,38 +2,32 @@
 Uma calculadora que resolve contas de +, -, * e / com números float
 """
 
-while True:
-    print()
-    sair = input('Você deseja sair? (s ou n) ')
+num1 = input('Digite o primeiro número: ')
+num2 = input('Digite o segundo número: ')
 
-    if sair == 's':
-        break
+# confere se os números digitados podem ser convertidos em float
+if not num1.replace('.', '', 1).isdigit and num2.replace('.', '', 1).isdigit:
+    print('Você deve digitar apenas números')
+
+else:
+    operador = input('Qual operação deve ser realizada? (+, -, *, /) ')
+
+    if operador == '+':
+        # reconhece o operador, converte os números em float e realiza a operação
+        resultado = float(num1) + float(num2)
+        print(resultado)
+
+    elif operador == '-':
+        resultado = float(num1) - float(num2)
+        print(resultado)
+
+    elif operador == '*':
+        resultado = float(num1) * float(num2)
+        print(resultado)
+
+    elif operador == '/':
+        resultado = float(num1) / float(num2)
+        print(resultado)
 
     else:
-        num1 = input('Digite o primeiro número: ')
-        num2 = input('Digite o segundo número: ')
-
-        if not num1.replace('.', '', 1).isdigit and num2.replace('.', '', 1).isdigit:
-            print('Você deve digitar apenas números')
-
-        else:
-            operador = input('Qual operação deve ser realizada? (+, -, *, /) ')
-
-            if operador == '+':
-                resultado = float(num1) + float(num2)
-                print(resultado)
-
-            elif operador == '-':
-                resultado = float(num1) - float(num2)
-                print(resultado)
-
-            elif operador == '*':
-                resultado = float(num1) * float(num2)
-                print(resultado)
-
-            elif operador == '/':
-                resultado = float(num1) / float(num2)
-                print(resultado)
-
-            else:
-                print('O operador deve ser apenas +, -, * ou /')
+        print('O operador deve ser apenas +, -, * ou /')

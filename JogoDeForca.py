@@ -2,6 +2,7 @@
 O código pergunta uma palavra, dá chances e pergunta letras
 o objetivo é acertar as letras da palavra
 """
+# Define a palavra secreta, o número de chances e cria a lista digitadas
 secreto = input('Qual será a palavra secreta? ')
 digitadas = []
 chances = 3
